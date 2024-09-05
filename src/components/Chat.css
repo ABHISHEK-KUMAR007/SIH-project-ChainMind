@@ -1,0 +1,306 @@
+/* .chat {
+    background-image: url("../images/design.jpg");
+}
+.chat-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.chat-middle{
+    padding-top: 90px;
+    padding-left: 30px;
+    min-height: 100vh;
+    height: 100%;
+}
+.chat-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #E9E9E9;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.chat-text {
+    width: 90%;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid #E9E9E9;
+}
+.chat-bottom-icon {
+    width: 30px;
+    margin-left: 23px;
+    cursor: pointer;
+}
+.chat-text::placeholder {
+    padding-left: 10px;
+}
+.send-icon{
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.file{
+    display: none;
+} */
+
+/*
+/* Main chat container */
+.chat {
+    background-image: url("../images/design.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Apply a readable font */
+}
+
+/* Chat top bar */
+.chat-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8); /* Add slight transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Chat middle area */
+.chat-middle {
+    padding-top: 70px; /* Adjusted for fixed chat-top height */
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-y: auto; /* Ensure scrolling if content overflows */
+    height: calc(100vh - 140px); /* Adjust height to fit fixed top and bottom bars */
+}
+
+/* Individual message item */
+.chat-middle h5 {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.chat-middle .MuiPaper-root {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for message bubble */
+}
+
+/* Chat bottom bar */
+.chat-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4f4f4; /* Slightly lighter color */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Chat text input */
+.chat-text {
+    width: calc(100% - 80px); /* Adjust width to fit icons */
+    height: 40px;
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Placeholder styling */
+.chat-text::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* File upload icon */
+.chat-bottom-icon {
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.chat-bottom-icon:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Send icon */
+.send-icon {
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.send-icon:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* File preview */
+.file-preview {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.file-preview img {
+    width: 70px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* Hidden file input */
+.file {
+    display: none;
+}
+
+*/
+
+/* Main chat container */
+.chat {
+    background-image: url("../images/design.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif; /* Switch to a modern font */
+    height: 100vh; /* Ensure full screen */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat top bar */
+.chat-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: #075E54; /* WhatsApp-like header color */
+    color: white;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Chat middle area */
+.chat-middle {
+    padding-top: 70px; /* Adjusted for fixed chat-top height */
+    padding-bottom: 80px; /* Adjusted for bottom input area */
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+    background-color: #ece5dd; /* WhatsApp-like background color */
+    scroll-behavior: smooth;
+}
+
+/* Individual message bubbles */
+.chat-middle h5 {
+    font-weight: bold;
+    color: #128C7E; /* WhatsApp-style name color */
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+/* User messages (sender) */
+.chat-middle .MuiPaper-root {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Light shadow */
+    position: relative;
+}
+
+/* Message received */
+.chat-middle .MuiPaper-root.received {
+    background-color: #fff; /* White for received messages */
+    margin-left: 10px;
+}
+
+/* Message sent */
+.chat-middle .MuiPaper-root.sent {
+    background-color: #dcf8c6; /* Light green for sent messages */
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Chat bottom bar */
+.chat-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Chat text input */
+.chat-text {
+    flex-grow: 1;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Placeholder styling */
+.chat-text::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* File upload icon */
+.chat-bottom-icon {
+    width: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.chat-bottom-icon:hover {
+    transform: scale(1.2); /* Slight scale effect on hover */
+}
+
+/* Send icon */
+.send-icon {
+    width: 32px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.send-icon:hover {
+    transform: scale(1.2); /* Slight scale effect on hover */
+}
+
+/* File preview */
+.file-preview {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.file-preview img {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Hidden file input */
+.file {
+    display: none;
+}
