@@ -17,7 +17,7 @@ function Main() {
         </Grid>
         <Grid item xs={7}>
           <div className='main-right'>
-            <img className='right-image' src={smartphone}/>
+            <img className='right-image' alt='image' src={smartphone}/>
             <h1 className='right-text'>Mychat web for desktop</h1>
             <h4  className='right-text'>Keep your computer connected</h4>
           </div>

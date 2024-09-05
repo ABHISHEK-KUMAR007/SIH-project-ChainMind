@@ -57,7 +57,7 @@ export default function Signin() {
                                 <h5 className='step'>3. Signin using phone number</h5>
                             </div>
                             <div onClick={googleSignin} className='signin-btn'>
-                                <img className='google' src={google}/>
+                                <img alt='image' className='google' src={google}/>
                             </div>
                         </CardContent>
                         <Link to="/phone" style={{textDecoration:"none"}}><Button color='success'>Signin with phone number</Button></Link>

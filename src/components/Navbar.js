@@ -21,16 +21,16 @@ export default function Navbar(props) {
     }
   }
 
-  console.log(auth.currentUser)
+  //console.log(auth.currentUser)
 
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar elevation={0} sx={{backgroundColor:"#E9E9E9",height:"70px"}} position="static">
         <Toolbar variant="dense">
-            <img   className='profile-img' src={props.recieverProImg ?? auth.currentUser?.photoURL}/>
+            <img alt='image'  className='profile-img' src={props.recieverProImg ?? auth.currentUser?.photoURL}/>
             <h3 className='reciever-name'>{props.recieverUsername ?? ""}</h3>
-            <img style={{marginLeft:"10px"}} onClick={logout} className='logout-icon' src={out}/>
+            <img alt='image' style={{marginLeft:"10px"}} onClick={logout} className='logout-icon' src={out}/>
         </Toolbar>
       </AppBar>
     </Box>
