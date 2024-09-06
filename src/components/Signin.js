@@ -10,11 +10,31 @@ import {signInWithPopup} from "firebase/auth"
 import {auth,database,googleProvider} from "../firebase/setup"
 import { doc, setDoc } from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 export default function Signin() {
 
    const navigate = useNavigate()
 
+
+
+//    const addUser = async (ipAddress) => {
+//     const userDoc = doc(database, "Users", `${auth.currentUser?.uid}`);
+//     try {
+//         console.log("ip\n"+ipAddress);
+        
+//       await setDoc(userDoc, {
+//         id: auth.currentUser?.uid,
+//         username: auth.currentUser?.displayName,
+//         profile_image: auth.currentUser?.photoURL,
+//         ip_address: ipAddress,
+//       });
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   };
+  
 
     const addUser = async ()=>{
         const userDoc = doc(database,"Users",`${auth.currentUser?.uid}`)
@@ -39,6 +59,18 @@ export default function Signin() {
         }
     }
 
+    // const googleSignin = async () => {
+    //     try {
+    //       await signInWithPopup(auth, googleProvider);
+    //       const ipResponse = await axios.get('https://api.ipify.org/?format=json');
+    //       const ipAddress = ipResponse.data.ip;
+    //       addUser(ipAddress);
+    //       navigate("/main");
+    //     } catch (err) {
+    //       console.error(err);
+    //     }
+    //   };
+      
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -66,4 +98,5 @@ export default function Signin() {
             </AppBar>
         </Box>
     );
+    
 }
