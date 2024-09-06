@@ -19,57 +19,57 @@ export default function Signin() {
 
 
 
-//    const addUser = async (ipAddress) => {
-//     const userDoc = doc(database, "Users", `${auth.currentUser?.uid}`);
-//     try {
-//         console.log("ip\n"+ipAddress);
+   const addUser = async (ipAddress) => {
+    const userDoc = doc(database, "Users", `${auth.currentUser?.uid}`);
+    try {
+        console.log("ip\n"+ipAddress);
         
-//       await setDoc(userDoc, {
-//         id: auth.currentUser?.uid,
-//         username: auth.currentUser?.displayName,
-//         profile_image: auth.currentUser?.photoURL,
-//         ip_address: ipAddress,
-//       });
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
+      await setDoc(userDoc, {
+        id: auth.currentUser?.uid,
+        username: auth.currentUser?.displayName,
+        profile_image: auth.currentUser?.photoURL,
+        ip_address: ipAddress,
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
   
 
-    const addUser = async ()=>{
-        const userDoc = doc(database,"Users",`${auth.currentUser?.uid}`)
-        try{
-            await setDoc(userDoc,{
-                id:auth.currentUser?.uid,
-                username:auth.currentUser?.displayName,
-                profile_image:auth.currentUser?.photoURL
-            })
-        }catch(err){
-            console.error(err)
-        }
-    }
-
-    const googleSignin = async()=>{
-        try{
-            await signInWithPopup(auth,googleProvider)
-            addUser()
-            navigate("/main")
-        }catch(err){
-            console.error(err)
-        }
-    }
-
-    // const googleSignin = async () => {
-    //     try {
-    //       await signInWithPopup(auth, googleProvider);
-    //       const ipResponse = await axios.get('https://api.ipify.org/?format=json');
-    //       const ipAddress = ipResponse.data.ip;
-    //       addUser(ipAddress);
-    //       navigate("/main");
-    //     } catch (err) {
-    //       console.error(err);
+    // const addUser = async ()=>{
+    //     const userDoc = doc(database,"Users",`${auth.currentUser?.uid}`)
+    //     try{
+    //         await setDoc(userDoc,{
+    //             id:auth.currentUser?.uid,
+    //             username:auth.currentUser?.displayName,
+    //             profile_image:auth.currentUser?.photoURL
+    //         })
+    //     }catch(err){
+    //         console.error(err)
     //     }
-    //   };
+    // }
+
+    // const googleSignin = async()=>{
+    //     try{
+    //         await signInWithPopup(auth,googleProvider)
+    //         addUser()
+    //         navigate("/main")
+    //     }catch(err){
+    //         console.error(err)
+    //     }
+    // }
+
+    const googleSignin = async () => {
+        try {
+          await signInWithPopup(auth, googleProvider);
+          const ipResponse = await axios.get('https://api.ipify.org?format=json');
+          const ipAddress = ipResponse.data.ip;
+          addUser(ipAddress);
+          navigate("/main");
+        } catch (err) {
+          console.error(err);
+        }
+      };
       
 
     return (

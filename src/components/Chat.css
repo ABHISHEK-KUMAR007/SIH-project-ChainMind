@@ -1,68 +1,18 @@
-/* .chat {
-    background-image: url("../images/design.jpg");
-}
-.chat-top {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-.chat-middle{
-    padding-top: 90px;
-    padding-left: 30px;
-    min-height: 100vh;
-    height: 100%;
-}
-.chat-bottom {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #E9E9E9;
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-.chat-text {
-    width: 90%;
-    height: 40px;
-    margin-left: 15px;
-    border-radius: 10px;
-    border: 1px solid #E9E9E9;
-}
-.chat-bottom-icon {
-    width: 30px;
-    margin-left: 23px;
-    cursor: pointer;
-}
-.chat-text::placeholder {
-    padding-left: 10px;
-}
-.send-icon{
-    width: 40px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-.file{
-    display: none;
-} */
-
-/*
-/* Main chat container */
 .chat {
     background-image: url("../images/design.jpg");
     background-size: cover;
     background-position: center;
-    font-family: Arial, sans-serif; /* Apply a readable font */
+    font-family: Arial, sans-serif; 
 }
 
-/* Chat top bar */
+
 .chat-top {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8); /* Add slight transparency */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 /* Chat middle area */
@@ -86,7 +36,6 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for message bubble */
 }
 
 /* Chat bottom bar */
@@ -94,7 +43,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #f4f4f4; /* Slightly lighter color */
+    background-color: #f4f4f4; 
     height: 70px;
     display: flex;
     align-items: center;
@@ -102,7 +51,6 @@
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
-/* Chat text input */
 .chat-text {
     width: calc(100% - 80px); /* Adjust width to fit icons */
     height: 40px;
@@ -161,7 +109,7 @@
     display: none;
 }
 
-*/
+
 
 /* Main chat container */
 .chat {
@@ -285,7 +233,6 @@
     transform: scale(1.2); /* Slight scale effect on hover */
 }
 
-/* File preview */
 .file-preview {
     display: flex;
     align-items: center;

@@ -3,7 +3,9 @@ import Main from './components/Main'
 import Signin from './components/Signin'
 import { Route, Routes } from 'react-router-dom'
 import Chat from './components/Chat'
+import "./App.css"
 import PhoneSignin from './components/PhoneSignin'
+
 
 function App() {
   return (
