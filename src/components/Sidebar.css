@@ -1,21 +1,93 @@
+
+
+
 .search {
-    display: flex;
-    align-items: center;
-    border: 1px solid #D4D4D4;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  margin:2px;
+  padding: 10px;
+  background-color: #cfcdcd; /* Dark background for the search bar */
+  border-bottom: 1px solid #333;
+   /* Slightly lighter border */
+   background: linear-gradient(to right, #507D2A, #87ebcf);
+   border-radius:8px;
 }
+
+/* Search icon and input styling */
 .search-icon {
-    width: 25px;
-    margin-left: 25px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1); /* Make the search icon white */
 }
+
 .search-text {
-    width: 350px;
-    height: 30px;
-    margin-left: 10px;
-    border-radius: 10px;
-    background-color: #E9E9E9;
-    border: 1px solid #E9E9E9;
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  background-color: #fff; /* Dark background for input */
+  color: #000; /* White text color for input */
+  /*box-shadow: 0 0 0 1px #444 inset;*/
+ 
 }
+
+/* Remove default padding and margin for lists */
+.MuiList-root {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for chat links */
 .chat-link {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Styling for individual user items */
+.MuiPaper-root {
+  margin: 5px 0;
+  background-color: #222; /* Dark background for list items */
+}
+
+.MuiListItem-root {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Avatar and list item text settings */
+.MuiAvatar-root {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.MuiListItemText-root {
+  margin: 0;
+  color: #fff; /* White text color for list items */
+}
+
+/* Hover effect for user items */
+
+  /* .MuiPaper-root:hover {
+  background-color: #333; 
+} */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .search-text {
+    font-size: 14px;
+  }
+
+  .MuiAvatar-root {
+    width: 35px;
+    height: 35px;
+  }
+
+  .MuiListItemText-root {
+    font-size: 14px;
+  }
 }

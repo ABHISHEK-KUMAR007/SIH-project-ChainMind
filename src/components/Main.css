@@ -1,13 +1,54 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fafbfa; 
+    color: #333; 
+}
+
+.MuiAppBar-root, .MuiToolbar-root {
+    margin: 0; /* Remove margin from AppBar and Toolbar */
+    padding: 0; /* Ensure padding is zero */
+  }
+  
+.MuiGrid-container {
+    height: 100vh; 
+    overflow: hidden;
+}
+
 .main-right {
-    background-color: #E9E9E9;
-    height:100vh
-}
-.right-image {
-    width:250px;
-    margin-left: 230px;
-    margin-top: 50px;
-}
-.right-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-weight: 400;
+    
+    color: #fff; 
+    /* background-color:rgb(19, 151, 180); */
+    /* background: linear-gradient(to right, #87CEEB, #008000); */
+    background: linear-gradient(45deg,#87CEEB, #507D2A); 
+}
+
+.right-image {
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.right-text {
+    margin: 10px 0;
+}
+
+.right-text h1 {
+    font-size: 2rem;
+    font-weight: bold; 
+    color: #fff;
+}
+
+.right-text h4 {
+    font-size: 1.2rem; 
+    font-weight: normal; 
+    color: #bbb; 
 }

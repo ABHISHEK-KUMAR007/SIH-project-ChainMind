@@ -73,8 +73,8 @@ export default function Signin() {
       
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ height: "230px", backgroundColor: "#2FBF89" }}>
+      <Box sx={{ flexGrow: 1, height:"100vh", backgroundColor: "#d4c7b0"}}>
+            <AppBar position="static" sx={{ height: "230px", backgroundColor: "#84a98c", }}>
                 <Toolbar>
                     <div className='nav-content'>
                         <img className='logo' src={whatsapp} />
@@ -92,7 +92,7 @@ export default function Signin() {
                                 <img alt='image' className='google' src={google}/>
                             </div>
                         </CardContent>
-                        <Link to="/phone" style={{textDecoration:"none"}}><Button color='success'>Signin with phone number</Button></Link>
+                        <Link className='custom-button'  to="/phone" style={{textDecoration:"none"}} ><Button color='success' >Signin with phone number</Button></Link>
                     </Card>
                 </Toolbar>
             </AppBar>

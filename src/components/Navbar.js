@@ -26,12 +26,17 @@ export default function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar elevation={0} sx={{backgroundColor:"#E9E9E9",height:"70px"}} position="static">
+      <AppBar elevation={0} sx={{background: "linear-gradient(to right, #507D2A, #87ebcf)",height:"70px"}} position="static">
         <Toolbar variant="dense">
             <img alt='image'  className='profile-img' src={props.recieverProImg ?? auth.currentUser?.photoURL}/>
             <h3 className='reciever-name'>{props.recieverUsername ?? ""}</h3>
-            <img alt='image' style={{marginLeft:"10px"}} onClick={logout} className='logout-icon' src={out}/>
+            <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
+            <span className='logout-text'>Logout</span>
+            <img alt='Logout icon' onClick={logout} className='logout-icon' src={out} />
+          </Box>
         </Toolbar>
+
+      
       </AppBar>
     </Box>
   );
