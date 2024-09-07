@@ -20,36 +20,36 @@
 // export const storage = getStorage(app);
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {getAuth,GoogleAuthProvider} from "firebase/auth"
-import {getFirestore} from "firebase/firestore"
-import { getStorage } from "firebase/storage"; 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// import { initializeApp } from "firebase/app";
+// import {getAuth,GoogleAuthProvider} from "firebase/auth"
+// import {getFirestore} from "firebase/firestore"
+// import { getStorage } from "firebase/storage"; 
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyB2sKWEJUe8lN3KSaC7Z4SvMVJI8AMvT7U",
-  authDomain: "mychatt-6cf4e.firebaseapp.com",
-  projectId: "mychatt-6cf4e",
-  storageBucket: "mychatt-6cf4e.appspot.com",
-  messagingSenderId: "282770822965",
-  appId: "1:282770822965:web:9875fd3a6c80cd6ed81e7c"
-};
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyB2sKWEJUe8lN3KSaC7Z4SvMVJI8AMvT7U",
+//   authDomain: "mychatt-6cf4e.firebaseapp.com",
+//   projectId: "mychatt-6cf4e",
+//   storageBucket: "mychatt-6cf4e.appspot.com",
+//   messagingSenderId: "282770822965",
+//   appId: "1:282770822965:web:9875fd3a6c80cd6ed81e7c"
+// };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-export const googleProvider = new GoogleAuthProvider(app)
-export const database = getFirestore(app)
-export const storage = getStorage(app);
-
-
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// export const auth = getAuth(app)
+// export const googleProvider = new GoogleAuthProvider(app)
+// export const database = getFirestore(app)
+// export const storage = getStorage(app);
 
 
 
-//2nd account
-//Import the functions you need from the SDKs you need
+
+
+// 2nd account
+// Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import {getAuth,GoogleAuthProvider} from "firebase/auth"
 // import {getFirestore} from "firebase/firestore"
@@ -74,3 +74,36 @@ export const storage = getStorage(app);
 // export const googleProvider = new GoogleAuthProvider(app)
 // export const database = getFirestore(app)
 // export const storage = getStorage(app);
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import {getAuth,GoogleAuthProvider} from "firebase/auth"
+import {getFirestore} from "firebase/firestore"
+import { getStorage } from "firebase/storage";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA1AeaFbIqCBYmLd0SeAk7INWnTEx9RH7M",
+  authDomain: "chatapp-9affe.firebaseapp.com",
+  projectId: "chatapp-9affe",
+  storageBucket: "chatapp-9affe.appspot.com",
+  messagingSenderId: "891493483909",
+  appId: "1:891493483909:web:da0387b994ee1bcc26b0ec"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app)
+export const googleProvider = new GoogleAuthProvider(app)
+export const database = getFirestore(app)
+export const storage = getStorage(app);
+
+
+
+//akash verma
+
+
