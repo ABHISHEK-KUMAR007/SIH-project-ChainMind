@@ -288,7 +288,7 @@ function Chat() {
 
   const showMessage = async () => {
     setLoading(true);
-    setInterval(()=>{
+    setInterval(async()=>{
     const userDoc = doc(database, "Users", `${auth.currentUser?.uid}`);
     const messageDoc = doc(userDoc, "Message", `${auth.currentUser?.uid}`);
     const messageRef = collection(messageDoc, `Message-${location.state.id}`);
