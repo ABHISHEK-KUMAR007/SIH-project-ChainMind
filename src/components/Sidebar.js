@@ -112,10 +112,11 @@ function Sidebar() {
               <List>
                 <ListItem>
                   <Avatar sx={{marginLeft:"10px"}} src={user.profile_image}/>
-                  <ListItemText sx={{marginLeft:"10px"}} primary={user.username}/>
+                  <ListItemText sx={{marginLeft:"10px",color:"black"}} primary={user.username}/>
                 </ListItem>
               </List>
             </Paper>
+            
           </Link>
         </div>
       ))}
